@@ -17,6 +17,15 @@ Feature: customer_login
       | raj.khan@bluerentalcars.com    | v7Hg_va^  |
       | pam.raymond@bluerentalcars.com | Nga^g6!   |
 
+#NOTES:
+#Scenaria Outline
+#   It is used to run the same scenario with different data multiple times
+#   It must be followed by an Examples keyword. Examples keyword is used to pass data
+#   Scenario Outline is used for parametrizing of the feature files
+#   It is used to pass test data dynamically
 
+# Cucumber reports plugins
+#   We can easily generate cucumber reports using report plugins in the runner
+#   We can generate different reports such as HTML,json and xml; but the most common one is the HTML report
 
 
