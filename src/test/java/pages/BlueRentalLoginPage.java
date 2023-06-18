@@ -13,7 +13,7 @@ public class BlueRentalLoginPage {
     public WebElement userEmail;
 
     @FindBy(id = "formBasicPassword")
-    public WebElement password;
+    public WebElement userPass;
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;

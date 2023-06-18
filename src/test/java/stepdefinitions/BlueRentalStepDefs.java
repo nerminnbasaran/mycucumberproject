@@ -7,6 +7,9 @@ import pages.BlueRentalLoginPage;
 import utilities.ReusableMethods;
 import utilities.WaitUtils;
 
+import java.util.List;
+import java.util.Map;
+
 public class BlueRentalStepDefs {
     BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
     BlueRentalLoginPage blueRentalLoginPage= new BlueRentalLoginPage();
@@ -18,7 +21,7 @@ public class BlueRentalStepDefs {
     @Given("user enters {string} and {string}")
     public void user_enters_and(String string, String string2) {
         blueRentalLoginPage.userEmail.sendKeys(string);
-        blueRentalLoginPage.password.sendKeys(string2);
+        blueRentalLoginPage.userPass.sendKeys(string2);
         WaitUtils.waitFor(1);
     }
     @Given("user clicks on the login page login button")
@@ -40,4 +43,26 @@ public class BlueRentalStepDefs {
         blueRentalHomePage.OK.click();
         WaitUtils.waitFor(1);
     }
+    @Given("user enters customer_email and customer_password")
+    public void user_enters_customer_email_and_customer_password(io.cucumber.datatable.DataTable credentials) {
+        /*
+//      1. GET DATA AS LIST<STRING>
+        List<String> customerData = credentials.row(1);
+//        System.out.println(customerData);//[jack@gmail.com, 12345]
+        blueRentalLoginPage.userEmail.sendKeys(customerData.get(0));//jack@gmail.com
+        blueRentalLoginPage.userPass.sendKeys(customerData.get(1));//12345
+
+         */
+
+//      2. LIST<MAP<STRING,STRING>>
+        List<Map<String,String>> customerData = credentials.asMaps(String.class,String.class);
+        System.out.println(customerData);//[{email=jack@gmail.com, password=12345}]
+        for (Map<String,String> each : customerData){
+            blueRentalLoginPage.userEmail.sendKeys(each.get("email"));
+            blueRentalLoginPage.userPass.sendKeys(each.get("password"));
+        }
+
+    }
+
+
 }
