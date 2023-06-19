@@ -8,4 +8,13 @@ Feature: excel_automation
     Given user tries to login as "customer_info"
     Then close the application
 
+    Scenario: TC02_login_admin
+#     logs in
+#     verify default page is visible
+#     log out
+#     closes the driver
+      Given user tries to login as "admin_info"
+      Then close the application
+
+
 

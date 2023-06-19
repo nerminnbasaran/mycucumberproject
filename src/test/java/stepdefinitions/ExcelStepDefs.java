@@ -10,6 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelStepDefs {
+    /*
+    In cucumber we can get data using different ways
+    *Scenario Outline
+    *DataTables
+    *Excel(not as common as the first 2 options. Excel can be used in cucumber,testng,junit)
+    Apache poi library is used for excel
+     */
     BlueRentalLoginPage blueRentalLoginPage;
     BlueRentalHomePage blueRentalHomePage;
     ExcelUtils excelUtils;//Used to call Excel Utils methods
