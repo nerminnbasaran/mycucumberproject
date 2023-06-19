@@ -38,7 +38,7 @@ public class FailedRunner {
       - Test Object : It is the name of the Web Page object/element, like Username&Password
       - Action : It is the name of the action, which is going to perform on any Object such as click, open browser, input etc.
       - Test Data : Data can be any value which is needed by the Object to perform any action, like Username value for Username field
-        HYBRID FRAMEWORK:
+        HYBRID FRAMEWORK:(very popular)
       - A framework that can do both Behavior Driven Testing and Data Driven Testing
 
       **Normally we used excel in JUnit, excel in Test NG, excel in cucumber

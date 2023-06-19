@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},//PATH OF STEPDEFINITIONS FOLDER
         dryRun = false, //dryRun = true : RUN AND GENERATES ONLY MISSING STEP DEFS
 //                      dryRun=false :  RUN NORMAL. THIS IS DEFAULT VALUE
-        tags = "@failed_test_case" //MARKS WHICH FEATURE FILE TO RUN
+        tags = "@excel_automation" //MARKS WHICH FEATURE FILE TO RUN
 )
 public class Runner {
 }
