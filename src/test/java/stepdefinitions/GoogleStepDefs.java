@@ -17,11 +17,11 @@ public class GoogleStepDefs {
     @Given("user is on the google home page")
     public void user_is_on_the_google_home_page() {
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
-        try {
-            googlePage.popUpAccept.click();//If there is a pop up on google clicking
-        } catch (Exception e) {
-
-        }
+//        try {
+//            googlePage.popUpAccept.click();//If there is a pop up on google clicking
+//        } catch (Exception e) {
+//
+//        }
     }
 
     @Given("user search for iPhone")
