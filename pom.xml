@@ -53,6 +53,12 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.3</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.13.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -80,8 +86,8 @@
                 <configuration>
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
-                    <threadCount>2</threadCount>
-                    <reuseForks>false</reuseForks>
+                    <threadCount>3</threadCount>
+                    <forkCount>false</forkCount>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
                     <argLine>-XX:MaxPermSize=256m</argLine>

@@ -8,6 +8,7 @@ Feature: excel_automation
     Given user tries to login as "customer_info"
     Then close the application
 
+    @excel_admin
     Scenario: TC02_login_admin
 #     logs in
 #     verify default page is visible
