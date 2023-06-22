@@ -18,8 +18,66 @@ Official Documentation : https://www.selenium.dev/documentation/grid/getting_sta
    For me : cd /Users/techproed/IdeaProjects/mycucumberproject/SeleniumServer
 5. Run the grid standalone server
     java -jar selenium-server-4.10.0.jar standalone
+    java -jar selenium-server-4.8.0.jar standalone
    Then you should see this message : Started Selenium Standalone 4.10.0 (revision c14d967899): http://192.168.1.66:4444
+
+TROUBLESHOOTING :
+   NOTES : if 4.10.0 is not working
+   1. put 4.8.0 in SeleniumServer folder
+   2. in your terminal close the previous session (Control +C)
+   3. run this on the terminal : java -jar selenium-server-4.8.0.jar standalone
+   4. run your runner one more time
 
    Now the hub and node runs and we are able to run the tests on grid....
 
    To close the server : Control C
+
+6. Create a new feature file :grid_test_case.feature
+
+7. Complete the step definitions. Make sure to use RemoteWebDriver
+++++++++++++++++++++++++++++++DONE++++++++++++++++++++++++++++
+--What is Selenium Grid?
+One of the selenium components. (RC,WebDriver,Grid,IDE)
+--What is it used for?(can be answered on the first question)
+*It is used to run test cases
+    -on remote web driver
+    -for cross-browser testing(chrome,firefox,safari,edge...)
+    -for parallel testing(normal framework should be configured for parallel testing for example, testng parallel testing)
+    -for running on different operating systems such as IOS, windows
+*Did you use selenium grid?
+    -yes I used in my project for cross browser testing
+*How do you run tests on grid?
+    -I use selenium server and drivers in the same directory
+    -Then we should run the server. I use standalone mode : java -jar selenium-server-4.8.0.jar standalone
+    -with grid 4, we have options to run 1.standalone mode. 2.distributed mode. 3. using HUB and NODE(same as grid 3)
+*What is HUB?
+    -Hub is the server that managed the nodes. we can have singe hub
+    java -jar selenium-server-<version>.jar hub
+*What is NODE?
+    -node is the remote virtual machines. we can have multiple nodes
+    java -jar selenium-server-<version>.jar node
+
+
+
+
+
+******SELENIUM GRID(FROM PRESENTATION )******
+It enables running Selenium tests on multiple machines and browsers simultaneously
+(Parallel testing and cross browser testing, remote testing)
+The architecture involves two main components: the Hub and the Nodes.
+The Hub acts as a central server that controls the execution of tests.
+Nodes are individual machines that execute the test scripts.
+Nodes register with the Hub and checks their availability with specific browser and platform configurations
+The Hub receives test requests and delegates them to available nodes based on the requested configurations
+*It is useful for testing web applications across different browsers, operating systems and device configurations
+
+HUB	: is a server that drives the parallel test execution on different machines.
+NODE	: is a virtual machine that is registered to a hub
+
+WHAT IS CROSS BROWSER TESTING?
+-to test the same cases on different browsers
+-for ex. We can test login functionality on a chrome and firefox
+HOW?
+-There are different ways to do cross browser testing
+-ın TestNG we can configure our testing xml files to do cross browser testing .We can also use Selenium Grid
+-In Cucumber ->We can use Selenium Grid
