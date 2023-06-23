@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},//PATH OF STEPDEFINITIONS FOLDER
         dryRun = false, //dryRun = true : RUN AND GENERATES ONLY MISSING STEP DEFS
 //                      dryRun=false :  RUN NORMAL. THIS IS DEFAULT VALUE
-        tags = "@grid_chrome" //MARKS WHICH FEATURE FILE TO RUN
+        tags = "@data_tables_new_user" //MARKS WHICH FEATURE FILE TO RUN
 )
 public class Runner {
 }
